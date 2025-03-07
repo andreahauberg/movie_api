@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Playing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/spa.js"></script>
+</head>
+    <header>
+        <h1>The Movie Database</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" data-target="now_playing_page" title="Now Playing page" class="selected">Now Playing</a></li>
+            <li><a href="#" data-target="popular_page" title="Popular page">Popular</a></li>
+            <li><a href="#" data-target="top_rated_page" title="Top Rated page">Top Rated</a></li>
+            <li><a href="#" data-target="upcoming_page" title="Upcoming page">Upcoming</a></li>
+        </ul>
+    </nav>
+<body>
+    <main>
+        <section id="now_playing_page" class="page"> 
+            <div class="movies"></div>
+        </section>
+
+        <section id="popular_page" class="page hidden" aria-hidden="true">
+            <div class="movies"></div>
+        </section>
+
+        <section id="top_rated_page" class="page hidden" aria-hidden="true">
+            <div class="movies"></div>
+        </section>
+
+        <section id="upcoming_page" class="page hidden" aria-hidden="true">
+            <div class="movies"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Movie Database</p>
+    </footer>
+            
+    
+</body>
+<template id="movie-template">
+    <article class="movie">
+        <img src="" alt="">
+        <h2></h2>
+        <p>⭐ <span class="rating"></span></p>
+    </article>
+</template>
+
+</html>

@@ -1,0 +1,22 @@
+:root {
+    --colorMain: #1c1c1c;
+    --colorHeader: #f5c518;
+    --colorList: #e50914;
+    --colorSelected: #ffcc00;
+    --colorBgHeader: #141414;
+    --colorBgNav: #333333;
+    --colorBgArticle: #1a1a1a; 
+    --colorFontMain: #f1f1f1; 
+
+    --fontMain: 'Helvetica Neue', Arial, sans-serif;
+    --fontTitle: 'Pacifico', 'Comic Sans MS', cursive;
+    --fontNav: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    --fontList: 'Futura', 'Trebuchet MS', sans-serif;
+
+    --headerFontSmall: 1.2rem;
+    --headerFontMedium: 1.4rem;
+    --h1Font: 2rem;
+    --h2Font: 1.5rem;
+    --ratingFont: 1.2rem;
+
+}
