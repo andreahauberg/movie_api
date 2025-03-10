@@ -33,6 +33,7 @@
                 border-radius: 5px;
                 background-color: var(--colorHeader);
                 color: var(--colorBgNav);
+                font-size: var(--h2Font);
                 font-weight: bold;
                 cursor: pointer;
                 transition: background 0.3s ease;
@@ -56,5 +57,13 @@
         }       
         .description, h2, .rating {
             color: var(--colorFontMain);
+        }
+        h2{
+            font-size: var(--h2Font);
+            margin: 0.2rem 0;
+        }
+        .container_rating {
+            font-size: var(--ratingFont);
+            padding-bottom: 1rem;
         }
 }

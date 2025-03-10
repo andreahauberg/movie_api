@@ -56,7 +56,14 @@ const renderMovies = (category, movies) => {
   document.addEventListener("click", (event) => {
     if (event.target.matches(".accordion")) {
       const panel = event.target.nextElementSibling;
-      panel.classList.toggle("open");
+      const isOpen = panel.classList.toggle("open");
+
+      if (isOpen) {
+        event.target.textContent = "Read less";
+      } else {
+        event.target.textContent = "Read more";
+      }
     }
   });
+
 categories.forEach((category) => fetchMoviesByCategory(category));
