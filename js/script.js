@@ -43,6 +43,7 @@ const renderMovies = (category, movies) => {
 
     movieElement.querySelector("h2").textContent = movie.title;
     movieElement.querySelector(".rating").textContent = movie.vote_average;
+    movieElement.querySelector(".description").textContent = movie.overview;
 
     moviesContainer.appendChild(movieElement);
   });
