@@ -45,8 +45,18 @@ const renderMovies = (category, movies) => {
     movieElement.querySelector(".rating").textContent = movie.vote_average;
     movieElement.querySelector(".description").textContent = movie.overview;
 
-    moviesContainer.appendChild(movieElement);
-  });
-};
+     const button = movieElement.querySelector(".accordion");
+     const panel = movieElement.querySelector(".panel");
 
+     
+     moviesContainer.appendChild(movieElement);
+    });
+  };
+  
+  document.addEventListener("click", (event) => {
+    if (event.target.matches(".accordion")) {
+      const panel = event.target.nextElementSibling;
+      panel.classList.toggle("open");
+    }
+  });
 categories.forEach((category) => fetchMoviesByCategory(category));

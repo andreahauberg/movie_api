@@ -1,0 +1,60 @@
+@import 'variables.css';
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 2rem;
+}
+    .movie {
+        background: var(--colorBgNav);
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px var(--colorBGHeader);
+        transition: transform 0.2s;
+        &hover {
+        transform: translateY(-5px);
+        }
+        
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .info {
+            padding: 0.5rem 0;
+
+            .accordion {
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem;
+                margin-top: 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--colorHeader);
+                color: var(--colorBgNav);
+                font-weight: bold;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                &:hover {
+                    background-color: var(--colorSelected);
+                }
+            }
+        }
+    
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            background: var(--colorBgHeader);
+            padding: 0 1rem;
+            border-radius: 5px;
+        }
+        .panel.open {
+            max-height: 45rem;
+            padding: 1rem;
+        }       
+        .description, h2, .rating {
+            color: var(--colorFontMain);
+        }
+}
