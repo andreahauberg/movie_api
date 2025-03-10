@@ -44,6 +44,8 @@ const renderMovies = (category, movies) => {
     movieElement.querySelector("h2").textContent = movie.title;
     movieElement.querySelector(".rating").textContent = movie.vote_average;
     movieElement.querySelector(".description").textContent = movie.overview;
+    movieElement.querySelector(".release_date").textContent =
+      movie.release_date;
 
      const button = movieElement.querySelector(".accordion");
      const panel = movieElement.querySelector(".panel");

@@ -55,7 +55,7 @@
             max-height: 45rem;
             padding: 1rem;
         }       
-        .description, h2, .rating {
+        p, span, h2{
             color: var(--colorFontMain);
         }
         h2{
@@ -65,5 +65,9 @@
         .container_rating {
             font-size: var(--ratingFont);
             padding-bottom: 1rem;
+        }
+
+        .description{
+            padding-bottom: 0.5rem;
         }
 }
