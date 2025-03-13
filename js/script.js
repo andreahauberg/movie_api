@@ -47,25 +47,25 @@ const renderMovies = (category, movies) => {
     movieElement.querySelector(".release_date").textContent =
       movie.release_date;
 
-     const button = movieElement.querySelector(".accordion");
-     const panel = movieElement.querySelector(".panel");
+    const button = movieElement.querySelector(".accordion");
+    const panel = movieElement.querySelector(".panel");
 
-     
-     moviesContainer.appendChild(movieElement);
-    });
-  };
-  
-  document.addEventListener("click", (event) => {
-    if (event.target.matches(".accordion")) {
-      const panel = event.target.nextElementSibling;
-      const isOpen = panel.classList.toggle("open");
 
-      if (isOpen) {
-        event.target.textContent = "Read less";
-      } else {
-        event.target.textContent = "Read more";
-      }
-    }
+    moviesContainer.appendChild(movieElement);
   });
+};
+
+document.addEventListener("click", (event) => {
+  if (event.target.matches(".accordion")) {
+    const panel = event.target.nextElementSibling;
+    const isOpen = panel.classList.toggle("open");
+
+    if (isOpen) {
+      event.target.textContent = "Read less";
+    } else {
+      event.target.textContent = "Read more";
+    }
+  }
+});
 
 categories.forEach((category) => fetchMoviesByCategory(category));
